@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CTNModelStoreContainer" CdmEntityContainer="CTNEntities1">
+    <EntitySetMapping Name="Award">
+      <EntityTypeMapping TypeName="CTNModel.Award">
+        <MappingFragment StoreEntitySet="Award">
+          <ScalarProperty Name="AID" ColumnName="AID" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="Conten" ColumnName="Conten" />
+          <ScalarProperty Name="Aorder" ColumnName="Aorder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="CTNModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CaID" ColumnName="CaID" />
+          <ScalarProperty Name="CaName" ColumnName="CaName" />
+          <ScalarProperty Name="CaQName" ColumnName="CaQName" />
+          <ScalarProperty Name="CaIcon" ColumnName="CaIcon" />
+          <ScalarProperty Name="CaOrder" ColumnName="CaOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificate">
+      <EntityTypeMapping TypeName="CTNModel.Certificate">
+        <MappingFragment StoreEntitySet="Certificate">
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="Corder" ColumnName="Corder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company">
+      <EntityTypeMapping TypeName="CTNModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="CoID" ColumnName="CoID" />
+          <ScalarProperty Name="CoDName" ColumnName="CoDName" />
+          <ScalarProperty Name="CoPwd" ColumnName="CoPwd" />
+          <ScalarProperty Name="CoGName" ColumnName="CoGName" />
+          <ScalarProperty Name="CoGIcon" ColumnName="CoGIcon" />
+          <ScalarProperty Name="CoGTel" ColumnName="CoGTel" />
+          <ScalarProperty Name="CoGUrl" ColumnName="CoGUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hobbies">
+      <EntityTypeMapping TypeName="CTNModel.Hobbies">
+        <MappingFragment StoreEntitySet="Hobbies">
+          <ScalarProperty Name="HID" ColumnName="HID" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="Clike" ColumnName="Clike" />
+          <ScalarProperty Name="Cicon" ColumnName="Cicon" />
+          <ScalarProperty Name="Corder" ColumnName="Corder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InternshipExp">
+      <EntityTypeMapping TypeName="CTNModel.InternshipExp">
+        <MappingFragment StoreEntitySet="InternshipExp">
+          <ScalarProperty Name="INID" ColumnName="INID" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="INtime" ColumnName="INtime" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Conten" ColumnName="Conten" />
+          <ScalarProperty Name="INorder" ColumnName="INorder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Job">
+      <EntityTypeMapping TypeName="CTNModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="JID" ColumnName="JID" />
+          <ScalarProperty Name="Coid" ColumnName="Coid" />
+          <ScalarProperty Name="Caid" ColumnName="Caid" />
+          <ScalarProperty Name="JName" ColumnName="JName" />
+          <ScalarProperty Name="Jquality" ColumnName="Jquality" />
+          <ScalarProperty Name="Jsalary" ColumnName="Jsalary" />
+          <ScalarProperty Name="Jzdsaldw" ColumnName="Jzdsaldw" />
+          <ScalarProperty Name="Jzdsaldy" ColumnName="Jzdsaldy" />
+          <ScalarProperty Name="Jzgsaldy" ColumnName="Jzgsaldy" />
+          <ScalarProperty Name="ftime" ColumnName="ftime" />
+          <ScalarProperty Name="Ptime" ColumnName="Ptime" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Jrank" ColumnName="Jrank" />
+          <ScalarProperty Name="JNrank" ColumnName="JNrank" />
+          <ScalarProperty Name="Jdepict" ColumnName="Jdepict" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mailing">
+      <EntityTypeMapping TypeName="CTNModel.Mailing">
+        <MappingFragment StoreEntitySet="Mailing">
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="Mzt" ColumnName="Mzt" />
+          <ScalarProperty Name="Mtime" ColumnName="Mtime" />
+          <ScalarProperty Name="Coid" ColumnName="Coid" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectExp">
+      <EntityTypeMapping TypeName="CTNModel.ProjectExp">
+        <MappingFragment StoreEntitySet="ProjectExp">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="Ptime" ColumnName="Ptime" />
+          <ScalarProperty Name="Ptitle" ColumnName="Ptitle" />
+          <ScalarProperty Name="Pconten" ColumnName="Pconten" />
+          <ScalarProperty Name="Porder" ColumnName="Porder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skill">
+      <EntityTypeMapping TypeName="CTNModel.Skill">
+        <MappingFragment StoreEntitySet="Skill">
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="Sadept" ColumnName="Sadept" />
+          <ScalarProperty Name="Sorder" ColumnName="Sorder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CTNModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="UName" ColumnName="UName" />
+          <ScalarProperty Name="UPwd" ColumnName="UPwd" />
+          <ScalarProperty Name="UXName" ColumnName="UXName" />
+          <ScalarProperty Name="Uicon" ColumnName="Uicon" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="CStime" ColumnName="CStime" />
+          <ScalarProperty Name="Ujg" ColumnName="Ujg" />
+          <ScalarProperty Name="UTel" ColumnName="UTel" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="WX" ColumnName="WX" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="WB" ColumnName="WB" />
+          <ScalarProperty Name="XL" ColumnName="XL" />
+          <ScalarProperty Name="School" ColumnName="School" />
+          <ScalarProperty Name="Vocational" ColumnName="Vocational" />
+          <ScalarProperty Name="Qzyx" ColumnName="Qzyx" />
+          <ScalarProperty Name="Qwsal" ColumnName="Qwsal" />
+          <ScalarProperty Name="Evaluate" ColumnName="Evaluate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

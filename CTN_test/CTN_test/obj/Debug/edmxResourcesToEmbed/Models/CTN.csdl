@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CTNModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Award">
+    <Key>
+      <PropertyRef Name="AID" />
+    </Key>
+    <Property Name="AID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="Conten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Aorder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Award_User" FromRole="Award" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CaID" />
+    </Key>
+    <Property Name="CaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CaName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CaQName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CaIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CaOrder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Job" Relationship="Self.FK_Job_Category" FromRole="Category" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="Certificate">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="CName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Corder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Certificate_User" FromRole="Certificate" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CoID" />
+    </Key>
+    <Property Name="CoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CoDName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CoPwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CoGName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CoGIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CoGTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CoGUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Job" Relationship="Self.FK_Job_Company" FromRole="Company" ToRole="Job" />
+    <NavigationProperty Name="Mailing" Relationship="Self.FK_Mailing_Company" FromRole="Company" ToRole="Mailing" />
+  </EntityType>
+  <EntityType Name="Hobbies">
+    <Key>
+      <PropertyRef Name="HID" />
+    </Key>
+    <Property Name="HID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="Clike" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cicon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Corder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Hobbies_User" FromRole="Hobbies" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="InternshipExp">
+    <Key>
+      <PropertyRef Name="INID" />
+    </Key>
+    <Property Name="INID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="INtime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Conten" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INorder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_InternshipExp_User" FromRole="InternshipExp" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JID" />
+    </Key>
+    <Property Name="JID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Coid" Type="Int32" Nullable="false" />
+    <Property Name="Caid" Type="Int32" Nullable="false" />
+    <Property Name="JName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Jquality" Type="Int32" Nullable="false" />
+    <Property Name="Jsalary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Jzdsaldw" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Jzdsaldy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Jzgsaldy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ftime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ptime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Place" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Jrank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JNrank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Jdepict" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Job_Category" FromRole="Job" ToRole="Category" />
+    <NavigationProperty Name="Company" Relationship="Self.FK_Job_Company" FromRole="Job" ToRole="Company" />
+  </EntityType>
+  <EntityType Name="Mailing">
+    <Key>
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="MID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mzt" Type="Int32" Nullable="false" />
+    <Property Name="Mtime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Coid" Type="Int32" Nullable="false" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Company" Relationship="Self.FK_Mailing_Company" FromRole="Mailing" ToRole="Company" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Mailing_User" FromRole="Mailing" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="ProjectExp">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="Ptime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ptitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pconten" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Porder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_ProjectExp_User" FromRole="ProjectExp" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="SID" />
+    </Key>
+    <Property Name="SID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uid" Type="Int32" Nullable="false" />
+    <Property Name="SName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sadept" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sorder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Skill_User" FromRole="Skill" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UPwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UXName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Uicon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CStime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ujg" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="UTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="QQ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="XL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="School" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Vocational" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Qzyx" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Qwsal" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Evaluate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Award" Relationship="Self.FK_Award_User" FromRole="Users" ToRole="Award" />
+    <NavigationProperty Name="Certificate" Relationship="Self.FK_Certificate_User" FromRole="Users" ToRole="Certificate" />
+    <NavigationProperty Name="Hobbies" Relationship="Self.FK_Hobbies_User" FromRole="Users" ToRole="Hobbies" />
+    <NavigationProperty Name="InternshipExp" Relationship="Self.FK_InternshipExp_User" FromRole="Users" ToRole="InternshipExp" />
+    <NavigationProperty Name="Mailing" Relationship="Self.FK_Mailing_User" FromRole="Users" ToRole="Mailing" />
+    <NavigationProperty Name="ProjectExp" Relationship="Self.FK_ProjectExp_User" FromRole="Users" ToRole="ProjectExp" />
+    <NavigationProperty Name="Skill" Relationship="Self.FK_Skill_User" FromRole="Users" ToRole="Skill" />
+  </EntityType>
+  <Association Name="FK_Award_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Award" Type="Self.Award" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Award">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CaID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="Caid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Certificate_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Certificate" Type="Self.Certificate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Certificate">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CoID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="Coid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mailing_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Mailing" Type="Self.Mailing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CoID" />
+      </Principal>
+      <Dependent Role="Mailing">
+        <PropertyRef Name="Coid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hobbies_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Hobbies" Type="Self.Hobbies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Hobbies">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InternshipExp_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="InternshipExp" Type="Self.InternshipExp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="InternshipExp">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mailing_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Mailing" Type="Self.Mailing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Mailing">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectExp_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="ProjectExp" Type="Self.ProjectExp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="ProjectExp">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Skill_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Skill" Type="Self.Skill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Skill">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CTNEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Award" EntityType="Self.Award" />
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Certificate" EntityType="Self.Certificate" />
+    <EntitySet Name="Company" EntityType="Self.Company" />
+    <EntitySet Name="Hobbies" EntityType="Self.Hobbies" />
+    <EntitySet Name="InternshipExp" EntityType="Self.InternshipExp" />
+    <EntitySet Name="Job" EntityType="Self.Job" />
+    <EntitySet Name="Mailing" EntityType="Self.Mailing" />
+    <EntitySet Name="ProjectExp" EntityType="Self.ProjectExp" />
+    <EntitySet Name="Skill" EntityType="Self.Skill" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Award_User" Association="Self.FK_Award_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Award" EntitySet="Award" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_Category" Association="Self.FK_Job_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Job" EntitySet="Job" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Certificate_User" Association="Self.FK_Certificate_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Certificate" EntitySet="Certificate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_Company" Association="Self.FK_Job_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Job" EntitySet="Job" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mailing_Company" Association="Self.FK_Mailing_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Mailing" EntitySet="Mailing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hobbies_User" Association="Self.FK_Hobbies_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Hobbies" EntitySet="Hobbies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InternshipExp_User" Association="Self.FK_InternshipExp_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="InternshipExp" EntitySet="InternshipExp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mailing_User" Association="Self.FK_Mailing_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Mailing" EntitySet="Mailing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectExp_User" Association="Self.FK_ProjectExp_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ProjectExp" EntitySet="ProjectExp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Skill_User" Association="Self.FK_Skill_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Skill" EntitySet="Skill" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CompanyIndex</title>
+    <link href="~/Areas/Companyy/Controllers/layui/css/layui.css" rel="stylesheet" />
+</head>
+<body>
+    <ul class="layui-nav" lay-filter="">
+        <li class="layui-nav-item"><a href="/index/index">央视人才网</a></li>
+        <li class="layui-nav-item"><a href="/companyy/companys/CompanyInfo" target="fbody">公司管理</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">工作机会管理</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="">发布工作机会</a></dd>
+                <dd><a href="/companyy/companys/CompanGLgzjh" target="glbody">管理工作机会</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">人才管理</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="">查看简历</a></dd>
+                <dd><a href="">搜索人才</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item layui-layout-right">
+            <a href=""><img src="~/images/profile-icon01.png" class="layui-nav-img">我</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">修改信息</a></dd>
+                <dd><a href="javascript:;">安全管理</a></dd>
+                <dd><a href="javascript:;">退了</a></dd>
+            </dl>
+        </li>
+    </ul>
+
+    <iframe name="fbody" style="width:100%;min-height:600px;padding-top:4em;" frameborder="0"></iframe>
+    <iframe name="glbody" frameborder="0"></iframe>
+
+    <script src="~/Areas/Companyy/Controllers/layui/layui.js"></script>
+    <script type="text/javascript">
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use(['element','layer'], function () {
+            var element = layui.element;
+            var layer = layui.layer;
+            //…
+        });
+    </script>
+</body>
+</html>

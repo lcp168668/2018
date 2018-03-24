@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CTNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Award">
+    <Key>
+      <PropertyRef Name="AID" />
+    </Key>
+    <Property Name="AID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="Conten" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Aorder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CaID" />
+    </Key>
+    <Property Name="CaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CaName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CaQName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CaIcon" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CaOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Certificate">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="CName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Corder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CoID" />
+    </Key>
+    <Property Name="CoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CoDName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoPwd" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoGName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoGIcon" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoGTel" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoGUrl" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hobbies">
+    <Key>
+      <PropertyRef Name="HID" />
+    </Key>
+    <Property Name="HID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="Clike" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cicon" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Corder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InternshipExp">
+    <Key>
+      <PropertyRef Name="INID" />
+    </Key>
+    <Property Name="INID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="INtime" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Conten" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="INorder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JID" />
+    </Key>
+    <Property Name="JID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Coid" Type="int" Nullable="false" />
+    <Property Name="Caid" Type="int" Nullable="false" />
+    <Property Name="JName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Jquality" Type="int" Nullable="false" />
+    <Property Name="Jsalary" Type="varchar" MaxLength="50" />
+    <Property Name="Jzdsaldw" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Jzdsaldy" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Jzgsaldy" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ftime" Type="datetime" Nullable="false" />
+    <Property Name="Ptime" Type="datetime" Nullable="false" />
+    <Property Name="Place" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Jrank" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JNrank" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Jdepict" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mailing">
+    <Key>
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="MID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mzt" Type="int" Nullable="false" />
+    <Property Name="Mtime" Type="datetime" Nullable="false" />
+    <Property Name="Coid" Type="int" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProjectExp">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="Ptime" Type="datetime" Nullable="false" />
+    <Property Name="Ptitle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pconten" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Porder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="SID" />
+    </Key>
+    <Property Name="SID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uid" Type="int" Nullable="false" />
+    <Property Name="SName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sadept" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Sorder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UPwd" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UXName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Uicon" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sex" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="CStime" Type="datetime" Nullable="false" />
+    <Property Name="Ujg" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="UTel" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="QQ" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WX" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WB" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="XL" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="School" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Vocational" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Qzyx" Type="varchar" MaxLength="50" />
+    <Property Name="Qwsal" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Evaluate" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Award_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Award" Type="Self.Award" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Award">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Certificate_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Certificate" Type="Self.Certificate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Certificate">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hobbies_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Hobbies" Type="Self.Hobbies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Hobbies">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InternshipExp_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="InternshipExp" Type="Self.InternshipExp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="InternshipExp">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CaID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="Caid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CoID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="Coid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mailing_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Mailing" Type="Self.Mailing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CoID" />
+      </Principal>
+      <Dependent Role="Mailing">
+        <PropertyRef Name="Coid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mailing_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Mailing" Type="Self.Mailing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Mailing">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectExp_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="ProjectExp" Type="Self.ProjectExp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="ProjectExp">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Skill_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Skill" Type="Self.Skill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Skill">
+        <PropertyRef Name="Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CTNModelStoreContainer">
+    <EntitySet Name="Award" EntityType="Self.Award" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificate" EntityType="Self.Certificate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hobbies" EntityType="Self.Hobbies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InternshipExp" EntityType="Self.InternshipExp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mailing" EntityType="Self.Mailing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectExp" EntityType="Self.ProjectExp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Skill" EntityType="Self.Skill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Award_User" Association="Self.FK_Award_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Award" EntitySet="Award" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Certificate_User" Association="Self.FK_Certificate_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Certificate" EntitySet="Certificate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hobbies_User" Association="Self.FK_Hobbies_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Hobbies" EntitySet="Hobbies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InternshipExp_User" Association="Self.FK_InternshipExp_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="InternshipExp" EntitySet="InternshipExp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_Category" Association="Self.FK_Job_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Job" EntitySet="Job" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_Company" Association="Self.FK_Job_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Job" EntitySet="Job" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mailing_Company" Association="Self.FK_Mailing_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Mailing" EntitySet="Mailing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mailing_User" Association="Self.FK_Mailing_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Mailing" EntitySet="Mailing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectExp_User" Association="Self.FK_ProjectExp_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ProjectExp" EntitySet="ProjectExp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Skill_User" Association="Self.FK_Skill_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Skill" EntitySet="Skill" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

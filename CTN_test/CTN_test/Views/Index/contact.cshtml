@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "contact";
+}
+
+<!-- 地图 -->
+<div id="map" class="map">
+    <img src="/images/map.jpg" style="width:100%;" />
+</div> <!-- end .section -->
+<!-- 联系我们 -->
+<div class="section contact-us-section">
+    <div class="inner">
+        <div class="container">
+            <div class="contact-us-section-inner flex space-between no-wrap">
+                <div class="left">
+                    <h1>联系我们</h1>
+                    <p class="ultra-light">
+                        市场推广/品牌合作
+                        Email：mz-marketing@meizu.com
+                        认证店加盟
+                        电话：0756-1234 567
+                        (周一至周日9:00-12:00，13:30-18:00，法定节假日除外）
+                        国际业务
+                        公司：央视求职网科技有限公司
+                        地址：长沙这那什么的商业中心19楼01-02室
+                        电话：12345-6789 6666、12345-6789 6666、12345-6789 6666
+                        传真：12345-6789 6666
+                        Email：12345@666.com
+                    </p>
+                    <div class="follow-us flex no-column items-center">
+                        <h6>关注我们:</h6>
+                        <ul class="list-unstyled social-icons flex no-column">
+                            <li><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                        </ul> <!-- end .social-icons -->
+                    </div> <!-- end .follow-us -->
+                </div> <!-- end .left -->
+
+                <div class="right">
+
+                    <form action="scripts/contact.php" method="post" id="contact-form" class="contact-form">
+                        <div class="form-group-wrapper flex space-between items-center">
+                            <div class="form-group">
+                                <p class="label">您的名字*</p>
+                                <input type="text" id="contact-name" name="contact-name" placeholder="请输入您的名字" required="">
+                            </div> <!-- end .form-group -->
+                            <div class="form-group">
+                                <p class="label">您的邮箱*</p>
+                                <input type="email" id="contact-email" name="contact-email" placeholder="请输入您的邮箱" required="">
+                            </div> <!-- end .form-group -->
+                        </div> <!-- end .form-group-wrapper -->
+
+                        <div class="form-group textarea">
+                            <p class="label">反馈信息*</p>
+                            <textarea name="contact-message" id="contact-message" required="" rows="6" placeholder="请输入您的反馈信息"></textarea>
+                        </div> <!-- end .form-group -->
+                        <button type="submit" class="button" data-text="Submit">发送</button>
+
+                        <div id="contact-loading" class="alert alert-info form-alert">
+                            <span class="message">Loading...</span>
+                        </div>
+                        <div id="contact-success" class="alert alert-success form-alert">
+                            <span class="message">Success!</span>
+                        </div>
+                        <div id="contact-error" class="alert alert-danger form-alert">
+                            <span class="message">Error!</span>
+                        </div>
+                    </form> <!-- end .contact-form -->
+
+                </div> <!-- end .right -->
+            </div>	<!-- end .contact-us-section-inner -->
+        </div> <!-- end .container -->
+    </div> <!-- end .inner -->
+</div> <!-- end .section -->
+

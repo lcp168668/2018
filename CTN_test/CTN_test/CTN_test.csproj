@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56F749B6-9194-46B8-98B9-CD0FE61388A0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CTN_test</RootNamespace>
+    <AssemblyName>CTN_test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Companyy\Controllers\layui\css\layui.css" />
+    <Content Include="Areas\Companyy\Controllers\layui\css\layui.mobile.css" />
+    <Content Include="Areas\Companyy\Controllers\layui\css\modules\code.css" />
+    <Content Include="Areas\Companyy\Controllers\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="Areas\Companyy\Controllers\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="Areas\Companyy\Controllers\layui\css\modules\layer\default\icon.png" />
+    <Content Include="Areas\Companyy\Controllers\layui\css\modules\layer\default\layer.css" />
+    <Content Include="Areas\Companyy\Controllers\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\font\iconfont.svg" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\0.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\1.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\10.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\11.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\12.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\13.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\14.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\15.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\16.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\17.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\18.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\19.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\2.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\20.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\21.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\22.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\23.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\24.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\25.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\26.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\27.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\28.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\29.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\3.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\30.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\31.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\32.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\33.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\34.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\35.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\36.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\37.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\38.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\39.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\4.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\40.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\41.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\42.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\43.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\44.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\45.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\46.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\47.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\48.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\49.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\5.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\50.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\51.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\52.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\53.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\54.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\55.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\56.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\57.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\58.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\59.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\6.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\60.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\61.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\62.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\63.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\64.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\65.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\66.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\67.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\68.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\69.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\7.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\70.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\71.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\8.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\images\face\9.gif" />
+    <Content Include="Areas\Companyy\Controllers\layui\layui.all.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\layui.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\carousel.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\code.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\element.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\flow.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\form.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\jquery.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\laydate.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\layedit.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\layer.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\laypage.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\laytpl.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\mobile.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\table.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\tree.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\upload.js" />
+    <Content Include="Areas\Companyy\Controllers\layui\lay\modules\util.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\job.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.default.css" />
+    <Content Include="css\resume.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\tagsinput.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\background01.jpg" />
+    <Content Include="images\background02.jpg" />
+    <Content Include="images\background03.jpg" />
+    <Content Include="images\background04.jpg" />
+    <Content Include="images\category-icon01.png" />
+    <Content Include="images\category-icon02.png" />
+    <Content Include="images\category-icon03.png" />
+    <Content Include="images\category-icon04.png" />
+    <Content Include="images\category-icon05.png" />
+    <Content Include="images\category-icon06.png" />
+    <Content Include="images\category-icon07.png" />
+    <Content Include="images\category-icon08.png" />
+    <Content Include="images\category-icon09.png" />
+    <Content Include="images\category-icon10.png" />
+    <Content Include="images\client-logo-light01.png" />
+    <Content Include="images\client-logo-light02.png" />
+    <Content Include="images\client-logo-light03.png" />
+    <Content Include="images\client-logo-light04.png" />
+    <Content Include="images\client-logo-light05.png" />
+    <Content Include="images\client-logo-light06.png" />
+    <Content Include="images\client-logo01.png" />
+    <Content Include="images\client-logo02.png" />
+    <Content Include="images\client-logo03.png" />
+    <Content Include="images\client-logo04.png" />
+    <Content Include="images\client-logo05.png" />
+    <Content Include="images\client-logo06.png" />
+    <Content Include="images\company-logo01.jpg" />
+    <Content Include="images\company-logo02.jpg" />
+    <Content Include="images\company-logo03.jpg" />
+    <Content Include="images\company-logo04.jpg" />
+    <Content Include="images\company-logo05.jpg" />
+    <Content Include="images\company-logo06.jpg" />
+    <Content Include="images\company-logo07.jpg" />
+    <Content Include="images\company-logo08.jpg" />
+    <Content Include="images\company-logo09.jpg" />
+    <Content Include="images\company-logo10.jpg" />
+    <Content Include="images\company01.jpg" />
+    <Content Include="images\company02.jpg" />
+    <Content Include="images\company03.jpg" />
+    <Content Include="images\face.jpg" />
+    <Content Include="images\feature-icon01.png" />
+    <Content Include="images\feature-icon02.png" />
+    <Content Include="images\footer-logo.png" />
+    <Content Include="images\hb1.png" />
+    <Content Include="images\hb2.png" />
+    <Content Include="images\hb3.png" />
+    <Content Include="images\hb4.png" />
+    <Content Include="images\hb5.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\map.jpg" />
+    <Content Include="images\news-grid01.jpg" />
+    <Content Include="images\news-grid02.jpg" />
+    <Content Include="images\news-grid03.jpg" />
+    <Content Include="images\our-mission-icon.png" />
+    <Content Include="images\our-target-icon.png" />
+    <Content Include="images\profile-icon01.png" />
+    <Content Include="images\resume.png" />
+    <Content Include="images\team-member01.jpg" />
+    <Content Include="images\team-member02.jpg" />
+    <Content Include="images\team-member03.jpg" />
+    <Content Include="images\team-member04.jpg" />
+    <Content Include="images\vision-icon.png" />
+    <Content Include="js\bootstrap-select.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\Chart.bundle.min.js" />
+    <Content Include="js\imagesloaded.pkgd.min.js" />
+    <Content Include="js\isotope.pkgd.min.js" />
+    <Content Include="js\jquery-3.1.1.min.js" />
+    <Content Include="js\jquery.countTo.js" />
+    <Content Include="js\jquery.magnific-popup.js" />
+    <Content Include="js\jquery.waypoints.min.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\resume.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\tagsinput.js" />
+    <Content Include="js\typehead.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Companyy\Views\web.config" />
+    <Content Include="Areas\Userss\Views\web.config" />
+    <Content Include="fonts\fonts.zip" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons\fonts\ionicons.woff" />
+    <EntityDeploy Include="Models\CTN.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CTN.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\CTN.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CTN.edmx</DependentUpon>
+      <LastGenOutput>CTN.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\CTN.edmx.diagram">
+      <DependentUpon>CTN.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\CTN.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CTN.edmx</DependentUpon>
+      <LastGenOutput>CTN.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Companyy\Views\Companys\CompanyIndex.cshtml" />
+    <Content Include="Areas\Companyy\Controllers\layui\font\iconfont.eot" />
+    <Content Include="Areas\Companyy\Controllers\layui\font\iconfont.ttf" />
+    <Content Include="Areas\Companyy\Controllers\layui\font\iconfont.woff" />
+    <Content Include="Areas\Companyy\Views\Companys\CompanyInfo.cshtml" />
+    <Content Include="Areas\Companyy\Views\Companys\CompanGLgzjh.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="test.html" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Index\jobs.cshtml" />
+    <Content Include="Views\Index\resumes.cshtml" />
+    <Content Include="Views\Index\about.cshtml" />
+    <Content Include="Views\Index\contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Companyy\CompanyyAreaRegistration.cs" />
+    <Compile Include="Areas\Companyy\Controllers\CompanysController.cs" />
+    <Compile Include="Areas\Userss\UserssAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Award.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Certificate.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CTN.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTN.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CTN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CTN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTN.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hobbies.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InternshipExp.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Job.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mailing.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjectExp.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Skill.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs">
+      <DependentUpon>CTN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Index\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Companyy\Models\" />
+    <Folder Include="Areas\Companyy\Views\Shared\" />
+    <Folder Include="Areas\Userss\Controllers\" />
+    <Folder Include="Areas\Userss\Models\" />
+    <Folder Include="Areas\Userss\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2025</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2025/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

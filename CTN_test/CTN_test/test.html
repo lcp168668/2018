@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>分类编号</th>
+            <th>分类名称</th>
+            <th>分类全称</th>
+            <th>分类图标</th>
+            <th>分类排序</th>
+            <th>操作</th>
+        </tr>
+    </table>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.get("http://localhost:2025/SelCate", "", function (data) {
+                var tbl = $("table");
+                $("table tr:gt(0)").remove();
+                $.each(data, function (i, d) {
+                    var tr = $("<tr/>");
+                    var td1 = $("<td/>").text(d.CaID);
+                    var td2 = $("<td/>").text(d.CaName);
+                    var td3 = $("<td/>").text(d.CaQName);
+                    var td4 = $("<td/>").text(d.CaIcon);
+                    var td5 = $("<td/>").text(d.CaOrder);
+                    tr.append(td1).append(td2).append(td3).append(td4).append(td5);
+                    tbl.append(tr);
+                });
+            }, "json");
+        });
+    </script>
+</body>
+</html>

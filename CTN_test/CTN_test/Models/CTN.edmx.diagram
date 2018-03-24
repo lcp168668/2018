@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2dc60cd06f4e4f48bdf6430b78385ffe" Name="Diagram1">
+        <EntityTypeShape EntityType="CTNModel.Award" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.Category" Width="1.5" PointX="3.75" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.Certificate" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.Company" Width="1.5" PointX="3.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.Hobbies" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.InternshipExp" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.Job" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.Mailing" Width="1.5" PointX="6" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.ProjectExp" Width="1.5" PointX="3" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.Skill" Width="1.5" PointX="3" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="CTNModel.Users" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="CTNModel.FK_Award_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CTNModel.FK_Job_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="CTNModel.FK_Certificate_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CTNModel.FK_Job_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="CTNModel.FK_Mailing_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="CTNModel.FK_Hobbies_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CTNModel.FK_InternshipExp_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CTNModel.FK_Mailing_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CTNModel.FK_ProjectExp_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CTNModel.FK_Skill_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
